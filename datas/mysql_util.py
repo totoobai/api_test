@@ -19,10 +19,11 @@ class MysqlUtil:
         port = config.get_conf_int("mysql", "port")
         user=config.get_conf_str("mysql","user")
         pwd=config.get_conf_str("mysql","pwd")
+        charset=str(config.get_conf_str("mysql","charset"))
         # 异常处理
         try:
             self.mysql=pymysql.connect(host=host,user=user,password=pwd,database=None,
-                                       port=port,cursorclass=pymysql.cursors.DictCursor) # 返回字典对象
+                                       port=port,cursorclass=pymysql.cursors.DictCursor,charset='utf8') # 返回字典对象
         except Exception as e:
             print("Mysql connect failed!")
 

@@ -30,4 +30,10 @@ reports_dir=os.path.join(base_dir,"reports")
 # print(reports_dir)
 
 logs_dir=os.path.join(base_dir,"logs")
+logs_file=os.path.join(logs_dir,"logs.log")
 # print(logs_dir)
+
+testcases_dir=os.path.join(base_dir,"testcases")
+
+reports_dir=os.path.join(base_dir,"reports")
+reports_html=os.path.join(reports_dir,"report.html")
